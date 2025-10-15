@@ -1,0 +1,42 @@
+node,nodeLabel,is_seed,group,id,nodeLabel2
+Q100873124,Anna Siepmann,FALSE,ancestor,0,Anna Siepmann 0
+Q105926,Ingeburg Herz,FALSE,ancestor,1,Ingeburg Herz 1
+Q1113071,Willi Liebherr,TRUE,rich 2019,2,Willi Liebherr 2
+Q1170395,Max Herz,FALSE,ancestor,3,Max Herz 3
+Q127325131,Aloisia Johanna Porsche,FALSE,ancestor,4,Aloisia Johanna Porsche 4
+Q1336680,Emil Quandt,FALSE,ancestor,5,Emil Quandt 5
+Q1560580,Günter Herz,TRUE,rich 2019,6,Günter Herz 6
+Q15791692,Adolf Würth,FALSE,ancestor,7,Adolf Würth 7
+Q1674480,Isolde Liebherr,TRUE,rich 2019,8,Isolde Liebherr 8
+Q17310790,Christian Jacobs,TRUE,rich 2019,9,Christian Jacobs 9
+Q1741352,Nikolaus Knauf,TRUE,rich 2019,10,Nikolaus Knauf 10
+Q17574882,Georg Friedrich Wilhelm Schaeffler,TRUE,rich 2019,11,Georg Friedrich Wilhelm Schaeffler 11
+Q18704846,Theo Albrecht junior,TRUE,rich 2019,12,Theo Albrecht junior 12
+Q20751076,Marianne Bruhn,FALSE,ancestor,13,Marianne Bruhn 13
+Q20751111,Antonie Ewald,FALSE,ancestor,14,Antonie Ewald 14
+Q22001178,Alfred Kühne,FALSE,ancestor,15,Alfred Kühne 15
+Q2589319,Wolfgang Bruhn,FALSE,ancestor,16,Wolfgang Bruhn 16
+Q2644399,Alfons Knauf,FALSE,ancestor,17,Alfons Knauf 17
+Q2649583,Alma Würth,FALSE,ancestor,18,Alma Würth 18
+Q28317048,Beate Heister,TRUE,rich 2019,19,Beate Heister 19
+Q289590,Susanne Klatten,TRUE,rich 2019,20,Susanne Klatten 20
+Q30863,Karl Albrecht,FALSE,ancestor,21,Karl Albrecht 21
+Q5535800,Georg Schaeffler,FALSE,ancestor,22,Georg Schaeffler 22
+Q57249,Ferdinand Porsche,FALSE,ancestor,23,Ferdinand Porsche 23
+Q57771,Theo Albrecht,FALSE,ancestor,24,Theo Albrecht 24
+Q59245705,Cäcilie Albrecht,FALSE,ancestor,25,Cäcilie Albrecht 25
+Q592879,Anton Piëch,FALSE,ancestor,26,Anton Piëch 26
+Q63043,Günther Quandt,FALSE,ancestor,27,Günther Quandt 27
+Q68697,Max Rubner,FALSE,ancestor,28,Max Rubner 28
+Q72524,Herbert Quandt,FALSE,ancestor,29,Herbert Quandt 29
+Q75882,Johanna Quandt,FALSE,ancestor,30,Johanna Quandt 30
+Q75900,Stefan Quandt,TRUE,rich 2019,31,Stefan Quandt 31
+Q77084,Klaus J. Jacobs,FALSE,ancestor,32,Klaus J. Jacobs 32
+Q78241,Hans Liebherr,FALSE,ancestor,33,Hans Liebherr 33
+Q78465,Reinhold Würth,TRUE,rich 2019,34,Reinhold Würth 34
+Q78713,Ferdinand Piëch,TRUE,rich 2019,35,Ferdinand Piëch 35
+Q78769,Ferry Porsche,FALSE,ancestor,36,Ferry Porsche 36
+Q85636,Louise Piëch,FALSE,ancestor,37,Louise Piëch 37
+Q86208,Maria-Elisabeth Schaeffler,FALSE,rich 2019,38,Maria-Elisabeth Schaeffler 38
+Q97002,Wolfgang Porsche,TRUE,rich 2019,39,Wolfgang Porsche 39
+Q97739,Klaus-Michael Kühne,TRUE,rich 2019,40,Klaus-Michael Kühne 40

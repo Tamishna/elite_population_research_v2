@@ -1,0 +1,5 @@
+load("/Users/Tamishna/Desktop/Elite Population Research/data_prepared/fam_members_richies2019.RData")
+load("/Users/Tamishna/Desktop/Elite Population Research/data_prepared/mm2019_igraph.Rdata")
+load("/Users/Tamishna/Desktop/Elite Population Research/data_prepared/rich2019_with_info.RData")
+load("/Users/Tamishna/Desktop/Elite Population Research/data_prepared/rich2019_with_info.RData")
+load("/Users/Tamishna/Desktop/Elite Population Research/data_prepared/rich2019_with_info.RData")

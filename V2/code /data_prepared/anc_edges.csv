@@ -1,0 +1,33 @@
+from,to,type,fromLabel,toLabel,value
+Q75900,Q72524,has_father,Stefan Quandt,Herbert Quandt,1
+Q75900,Q75882,has_mother,Stefan Quandt,Johanna Quandt,1
+Q72524,Q63043,has_father,Herbert Quandt,Günther Quandt,1
+Q72524,Q20751111,has_mother,Herbert Quandt,Antonie Ewald,1
+Q75882,Q2589319,has_father,Johanna Quandt,Wolfgang Bruhn,1
+Q75882,Q20751076,has_mother,Johanna Quandt,Marianne Bruhn,1
+Q63043,Q1336680,has_father,Günther Quandt,Emil Quandt,1
+Q20751076,Q68697,has_father,Marianne Bruhn,Max Rubner,1
+Q289590,Q72524,has_father,Susanne Klatten,Herbert Quandt,1
+Q289590,Q75882,has_mother,Susanne Klatten,Johanna Quandt,1
+Q28317048,Q30863,has_father,Beate Heister,Karl Albrecht,1
+Q30863,Q100873124,has_mother,Karl Albrecht,Anna Siepmann,1
+Q18704846,Q57771,has_father,Theo Albrecht junior,Theo Albrecht,1
+Q18704846,Q59245705,has_mother,Theo Albrecht junior,Cäcilie Albrecht,1
+Q17574882,Q5535800,has_father,Georg Friedrich Wilhelm Schaeffler,Georg Schaeffler,1
+Q17574882,Q86208,has_mother,Georg Friedrich Wilhelm Schaeffler,Maria-Elisabeth Schaeffler,1
+Q97002,Q78769,has_father,Wolfgang Porsche,Ferry Porsche,1
+Q78769,Q57249,has_father,Ferry Porsche,Ferdinand Porsche,1
+Q78769,Q127325131,has_mother,Ferry Porsche,Aloisia Johanna Porsche,1
+Q78713,Q592879,has_father,Ferdinand Piëch,Anton Piëch,1
+Q78713,Q85636,has_mother,Ferdinand Piëch,Louise Piëch,1
+Q85636,Q57249,has_father,Louise Piëch,Ferdinand Porsche,1
+Q85636,Q127325131,has_mother,Louise Piëch,Aloisia Johanna Porsche,1
+Q97739,Q22001178,has_father,Klaus-Michael Kühne,Alfred Kühne,1
+Q78465,Q15791692,has_father,Reinhold Würth,Adolf Würth,1
+Q78465,Q2649583,has_mother,Reinhold Würth,Alma Würth,1
+Q1741352,Q2644399,has_father,Nikolaus Knauf,Alfons Knauf,1
+Q1113071,Q78241,has_father,Willi Liebherr,Hans Liebherr,1
+Q1674480,Q78241,has_father,Isolde Liebherr,Hans Liebherr,1
+Q17310790,Q77084,has_father,Christian Jacobs,Klaus J. Jacobs,1
+Q1560580,Q1170395,has_father,Günter Herz,Max Herz,1
+Q1560580,Q105926,has_mother,Günter Herz,Ingeburg Herz,1

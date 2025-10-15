@@ -1,0 +1,15 @@
+from,to,type
+Q101163,Q1113071,sibling_any
+Q101163,Q1674480,sibling_any
+Q105855915,Q60716,sibling_any
+Q105855915,Q97002,sibling_any
+Q1113071,Q1674480,sibling_any
+Q1540165,Q289590,sibling_any
+Q1540165,Q75900,sibling_any
+Q18704846,Q655637,sibling_any
+Q28317048,Q28317051,sibling_any
+Q289590,Q75900,sibling_any
+Q60716,Q97002,sibling_any
+Q62496,Q72524,sibling_any
+Q78713,Q94757736,sibling_any
+Q78769,Q85636,sibling_any
