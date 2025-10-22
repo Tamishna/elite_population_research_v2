@@ -1,0 +1,40 @@
+from,to,type,fromLabel,toLabel,value
+Q312556,Q97749941,has_father,Jeff Bezos,Ted Jorgensen,1
+Q312556,Q92464290,has_mother,Jeff Bezos,Jacklyn Gise,1
+Q97749941,Q102434206,has_father,Ted Jorgensen,Theodore John Jorgensen,1
+Q97749941,Q102434217,has_mother,Ted Jorgensen,Dolores Pollack,1
+Q92464290,Q102434015,has_father,Jacklyn Gise,Lawrence Preston Gise,1
+Q92464290,Q102434144,has_mother,Jacklyn Gise,Mattie Louise Strait,1
+Q102434217,Q105446586,has_mother,Dolores Pollack,Lillian Margaret Dewall,1
+Q102434015,Q106630002,has_father,Lawrence Preston Gise,Lloyd Preston Gise,1
+Q102434015,Q106630003,has_mother,Lawrence Preston Gise,Rebecca Mabel Hall,1
+Q102434144,Q106630013,has_father,Mattie Louise Strait,Yancy Clarence Straight (Strait),1
+Q102434144,Q106630015,has_mother,Mattie Louise Strait,Marie A Strait,1
+Q106630003,Q106630009,has_father,Rebecca Mabel Hall,Thomas King Hall,1
+Q106630003,Q106630007,has_mother,Rebecca Mabel Hall,Henrietta Trammell,1
+Q106630013,Q106630017,has_father,Yancy Clarence Straight (Strait),John Joseph Strait,1
+Q106630013,Q106630018,has_mother,Yancy Clarence Straight (Strait),Martha Eudora Strait,1
+Q106630009,Q106630021,has_father,Thomas King Hall,Robert Hall,1
+Q106630009,Q106630022,has_mother,Thomas King Hall,Mary Minerva Polly,1
+Q106630017,Q106630032,has_father,John Joseph Strait,John Joseph Strait,1
+Q106630017,Q106630036,has_mother,John Joseph Strait,Mary S. Boyd,1
+Q106630021,Q106630024,has_father,Robert Hall,James Brown Hall,1
+Q106630021,Q106630025,has_mother,Robert Hall,Rebecca Hall,1
+Q106630022,Q106630027,has_father,Mary Minerva Polly,"John Gladden King, Sr",1
+Q106630022,Q106630028,has_mother,Mary Minerva Polly,Parmelia Millie King,1
+Q106630032,Q106630037,has_father,John Joseph Strait,"James Strait, Sr.",1
+Q106630032,Q106630038,has_mother,John Joseph Strait,"Margaret ""Peggy"" Strait",1
+Q106630036,Q106630039,has_father,Mary S. Boyd,James Boyd,1
+Q106630036,Q106630040,has_mother,Mary S. Boyd,"Margaret ""Mary"" Lewis",1
+Q106630037,Q106630046,has_father,"James Strait, Sr.","Christopher Strait, Sr.",1
+Q106630037,Q106630047,has_mother,"James Strait, Sr.",Mary Strait,1
+Q106630046,Q106630048,has_father,"Christopher Strait, Sr.",Johann L. Strait,1
+Q106630046,Q106630050,has_mother,"Christopher Strait, Sr.",Margaret Elizabeth Mannesse,1
+Q106630047,Q106630051,has_father,Mary Strait,"Henry J Huddleston, Jr.",1
+Q106630047,Q106630052,has_mother,Mary Strait,Mary Huddleston,1
+Q23784752,Q92464290,has_mother,Mark Bezos,NA,NA
+Q135582897,Q106630017,has_father,John Samuel Strait,NA,NA
+Q135582897,Q106630018,has_mother,John Samuel Strait,NA,NA
+Q102433548,Q312556,has_father,second son of Jeff Bezos,NA,NA
+Q102433555,Q312556,has_father,third son of Jeff Bezos,NA,NA
+Q102433534,Q312556,has_father,Preston Bezos,NA,NA

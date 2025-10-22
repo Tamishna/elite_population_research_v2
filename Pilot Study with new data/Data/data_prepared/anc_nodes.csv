@@ -1,0 +1,40 @@
+node,nodeLabel,is_seed,group,id,nodeLabel2
+Q102434015,Lawrence Preston Gise,FALSE,ancestor,0,Lawrence Preston Gise 0
+Q102434144,Mattie Louise Strait,FALSE,ancestor,1,Mattie Louise Strait 1
+Q102434206,Theodore John Jorgensen,FALSE,ancestor,2,Theodore John Jorgensen 2
+Q102434217,Dolores Pollack,FALSE,ancestor,3,Dolores Pollack 3
+Q105446586,Lillian Margaret Dewall,FALSE,ancestor,4,Lillian Margaret Dewall 4
+Q106630002,Lloyd Preston Gise,FALSE,ancestor,5,Lloyd Preston Gise 5
+Q106630003,Rebecca Mabel Hall,FALSE,ancestor,6,Rebecca Mabel Hall 6
+Q106630007,Henrietta Trammell,FALSE,ancestor,7,Henrietta Trammell 7
+Q106630009,Thomas King Hall,FALSE,ancestor,8,Thomas King Hall 8
+Q106630013,Yancy Clarence Straight (Strait),FALSE,ancestor,9,Yancy Clarence Straight (Strait) 9
+Q106630015,Marie A Strait,FALSE,ancestor,10,Marie A Strait 10
+Q106630017,John Joseph Strait,FALSE,ancestor,11,John Joseph Strait 11
+Q106630018,Martha Eudora Strait,FALSE,ancestor,12,Martha Eudora Strait 12
+Q106630021,Robert Hall,FALSE,ancestor,13,Robert Hall 13
+Q106630022,Mary Minerva Polly,FALSE,ancestor,14,Mary Minerva Polly 14
+Q106630024,James Brown Hall,FALSE,ancestor,15,James Brown Hall 15
+Q106630025,Rebecca Hall,FALSE,ancestor,16,Rebecca Hall 16
+Q106630027,"John Gladden King, Sr",FALSE,ancestor,17,"John Gladden King, Sr 17"
+Q106630028,Parmelia Millie King,FALSE,ancestor,18,Parmelia Millie King 18
+Q106630032,John Joseph Strait,FALSE,ancestor,19,John Joseph Strait 19
+Q106630036,Mary S. Boyd,FALSE,ancestor,20,Mary S. Boyd 20
+Q106630037,"James Strait, Sr.",FALSE,ancestor,21,"James Strait, Sr. 21"
+Q106630038,"Margaret ""Peggy"" Strait",FALSE,ancestor,22,"Margaret ""Peggy"" Strait 22"
+Q106630039,James Boyd,FALSE,ancestor,23,James Boyd 23
+Q106630040,"Margaret ""Mary"" Lewis",FALSE,ancestor,24,"Margaret ""Mary"" Lewis 24"
+Q106630046,"Christopher Strait, Sr.",FALSE,ancestor,25,"Christopher Strait, Sr. 25"
+Q106630047,Mary Strait,FALSE,ancestor,26,Mary Strait 26
+Q106630048,Johann L. Strait,FALSE,ancestor,27,Johann L. Strait 27
+Q106630050,Margaret Elizabeth Mannesse,FALSE,ancestor,28,Margaret Elizabeth Mannesse 28
+Q106630051,"Henry J Huddleston, Jr.",FALSE,ancestor,29,"Henry J Huddleston, Jr. 29"
+Q106630052,Mary Huddleston,FALSE,ancestor,30,Mary Huddleston 30
+Q312556,Jeff Bezos,TRUE,seed list,31,Jeff Bezos 31
+Q92464290,Jacklyn Gise,FALSE,ancestor,32,Jacklyn Gise 32
+Q97749941,Ted Jorgensen,FALSE,ancestor,33,Ted Jorgensen 33
+Q102433534,Preston Bezos,NA,NA,NA,NA
+Q102433548,second son of Jeff Bezos,NA,NA,NA,NA
+Q102433555,third son of Jeff Bezos,NA,NA,NA,NA
+Q135582897,John Samuel Strait,NA,NA,NA,NA
+Q23784752,Mark Bezos,NA,NA,NA,NA
