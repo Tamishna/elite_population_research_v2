@@ -1,4 +1,3 @@
-
 # Elite Population Research 
 
 # What this script does (high level):
@@ -79,7 +78,7 @@ dir.create("data_prepared", showWarnings = FALSE, recursive = TRUE)
 dir.create("cache/parents", showWarnings = FALSE, recursive = TRUE)
 
 MAX_DEPTH   <- 20        # safety cap on generations
-SEED_LIMIT  <- 20        # set to a small number for pilot run; NA = all
+SEED_LIMIT  <- 10       # set to a small number for pilot run; NA = all
 BASE_SLEEP  <- 0.25      # polite delay
 RETRY_TRIES <- 3
 BACKOFF     <- 1.7
@@ -117,7 +116,6 @@ safe_query <- function(sparql, tries = RETRY_TRIES, sleep = BASE_SLEEP, backoff 
 dir.create("cache/children", showWarnings = FALSE, recursive = TRUE)
 child_cache_file <- function(qid) file.path("cache/children", paste0(qid, ".rds"))
 
-# Given a parent QID, query all children of a parent (both sides)
 wd_get_children <- function(parent_qid, use_cache = TRUE) {
   cf <- child_cache_file(parent_qid)
   if (use_cache && file.exists(cf)) return(readRDS(cf))
@@ -159,12 +157,18 @@ children_edges_for_parents <- function(parents_qids) {
     ch_ok <- ch %>% dplyr::filter(!is.na(.data$child), stringr::str_starts(.data$child, "Q"))
     
     if (nrow(ch_ok)) {
-      edge_buf[[length(edge_buf)+1]] <- ch_ok %>%
-        dplyr::transmute(from = .data$child,
-                         to = pq,
-                         type = .data$side,
-                         fromLabel = .data$childLabel,
-                         toLabel = NA_character_)
+      edge_buf[[length(edge_buf)+1]] <- ch %>%
+        dplyr::filter(!is.na(.data$child), stringr::str_starts(.data$child, "Q")) %>%
+        dplyr::transmute(
+          from      = .data$child,
+          to        = pq,
+          type      = .data$side,
+          fromLabel = .data$childLabel,
+          toLabel   = NA_character_,  
+          value     = 1L,             
+
+        )
+      
       
       node_buf[[length(node_buf)+1]] <- ch_ok %>%
         dplyr::transmute(node = .data$child, nodeLabel = .data$childLabel)
@@ -613,6 +617,24 @@ nodes <- nodes %>%
   dplyr::mutate(nodeLabel = dplyr::coalesce(nodeLabel, nodeLabel.new)) %>%
   dplyr::select(-nodeLabel.new)
 
+edges <- edges %>%
+  # parent labels
+  dplyr::left_join(
+    nodes %>% dplyr::transmute(to = node, toLabel_fill = dplyr::coalesce(nodeLabel, node)),
+    by = "to"
+  ) %>%
+  # child labels
+  dplyr::left_join(
+    nodes %>% dplyr::transmute(from = node, fromLabel_fill = dplyr::coalesce(nodeLabel, node)),
+    by = "from"
+  ) %>%
+  dplyr::mutate(
+    toLabel   = dplyr::coalesce(toLabel, toLabel_fill, to),       
+    fromLabel = dplyr::coalesce(fromLabel, fromLabel_fill, from), 
+    value     = dplyr::coalesce(value, 1L)                        
+  ) %>%
+  dplyr::select(-toLabel_fill, -fromLabel_fill)
+
 cat(sprintf("After augmentation → Nodes: %s | Edges: %s\n", nrow(nodes), nrow(edges)))
 
 # Quick CSVs
@@ -917,5 +939,8 @@ browseURL(out_html_h)
 cat("Saved horizontal relationship graph → ", out_html_h, "\n", sep = "")
 
 ### The End ###
+
+
+
 
 
