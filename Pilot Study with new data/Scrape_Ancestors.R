@@ -79,7 +79,7 @@ dir.create("data_prepared", showWarnings = FALSE, recursive = TRUE)
 dir.create("cache/parents", showWarnings = FALSE, recursive = TRUE)
 
 MAX_DEPTH   <- 20        # safety cap on generations
-SEED_LIMIT  <- 1        # set to a small number for pilot run; NA = all
+SEED_LIMIT  <- 20        # set to a small number for pilot run; NA = all
 BASE_SLEEP  <- 0.25      # polite delay
 RETRY_TRIES <- 3
 BACKOFF     <- 1.7
