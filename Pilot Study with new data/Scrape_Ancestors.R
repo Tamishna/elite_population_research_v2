@@ -121,6 +121,7 @@ child_cache_file <- function(qid) file.path("cache/children", paste0(qid, ".rds"
 wd_get_children <- function(parent_qid, use_cache = TRUE) {
   cf <- child_cache_file(parent_qid)
   if (use_cache && file.exists(cf)) return(readRDS(cf))
+  
   sparql <- paste0(
     "SELECT ?child ?childLabel ?side (YEAR(?child_birth) AS ?child_birth_year) WHERE { ",
     "  { ?child wdt:P22 wd:", parent_qid, " . BIND(\"has_father\" AS ?side) } UNION ",
@@ -129,31 +130,55 @@ wd_get_children <- function(parent_qid, use_cache = TRUE) {
     "  SERVICE wikibase:label { bd:serviceParam wikibase:language 'de,en'. } ",
     "}"
   )
+  
   Sys.sleep(BASE_SLEEP)
   res <- safe_query(sparql)
-  res <- res %>% dplyr::mutate(dplyr::across(dplyr::everything(), as.character))
+  
+  # Coerce to a tibble and enforce column presence + types
+  res <- tibble::as_tibble(res)
+  needed <- c("child","childLabel","side","child_birth_year")
+  for (nm in needed) if (!nm %in% names(res)) res[[nm]] <- NA_character_
+  
+  # This makes types predictable (strings; year can be NA_character_)
+  res <- dplyr::mutate(res, dplyr::across(dplyr::everything(), as.character))
+  res <- dplyr::select(res, dplyr::all_of(needed))
+  
   saveRDS(res, cf)
   res
 }
+
 
 # Build child->parent edges for a set of parents
 children_edges_for_parents <- function(parents_qids) {
   edge_buf <- list(); node_buf <- list()
   for (pq in parents_qids) {
     ch <- wd_get_children(pq)
+    if (!is.data.frame(ch) || !all(c("child","childLabel","side") %in% names(ch))) next
     if (nrow(ch) == 0) next
-    edge_buf[[length(edge_buf)+1]] <- ch %>%
-      dplyr::transmute(from = child, to = pq, type = side,
-                       fromLabel = childLabel, toLabel = NA_character_)
-    node_buf[[length(node_buf)+1]] <- ch %>%
-      dplyr::transmute(node = child, nodeLabel = childLabel)
+    
+    ch_ok <- ch %>% dplyr::filter(!is.na(.data$child), stringr::str_starts(.data$child, "Q"))
+    
+    if (nrow(ch_ok)) {
+      edge_buf[[length(edge_buf)+1]] <- ch_ok %>%
+        dplyr::transmute(from = .data$child,
+                         to = pq,
+                         type = .data$side,
+                         fromLabel = .data$childLabel,
+                         toLabel = NA_character_)
+      
+      node_buf[[length(node_buf)+1]] <- ch_ok %>%
+        dplyr::transmute(node = .data$child, nodeLabel = .data$childLabel)
+    }
   }
+  
   edges_down <- if (length(edge_buf)) dplyr::bind_rows(edge_buf) else
-    tibble::tibble(from=character(), to=character(), type=character(), fromLabel=character(), toLabel=character())
+    tibble::tibble(from=character(), to=character(), type=character(),
+                   fromLabel=character(), toLabel=character())
   nodes_add <- if (length(node_buf)) dplyr::bind_rows(node_buf) else
     tibble::tibble(node=character(), nodeLabel=character())
-  list(edges = edges_down %>% dplyr::distinct(),
-       nodes = nodes_add %>% dplyr::distinct())
+  
+  list(edges = dplyr::distinct(edges_down),
+       nodes = dplyr::distinct(nodes_add))
 }
 
 # Merge existing graph with newly discovered children
